@@ -1,0 +1,22 @@
+button, .btn {
+    cursor: pointer;
+    font-family: $inter;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 16px;
+    border-radius: 58px;
+    padding: 4px 20px;
+    margin-bottom: $spacer/4;
+    @include media-breakpoint-up(lg) {
+        padding: 12px 32px;
+    }
+}
+.btn-secondary {
+    color: $brown;
+}
+body .gform_wrapper .gform_footer input[type=submit] {
+    @extend .btn;
+    @extend .btn-outline-primary;
+    margin-top: 0 !important;
+    padding: 12px 32px;
+}

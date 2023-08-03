@@ -1,0 +1,19 @@
+//captcha mobile fix
+@media (max-width: 361.98px) {
+    #gform_wrapper_1 div.ginput_recaptcha,
+    #gform_wrapper_7 div.ginput_recaptcha {
+        -ms-transform: scale(.8);
+        transform: scale(.8);
+        -webkit-transform: scale(.8);
+        -ms-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0
+    }
+}
+
+
+body .gform_body .gform_fields .gfield .gfield_label {
+    font-size: 14px;
+    font-weight: 400;
+    color: lighten($body-color, 35%);
+}
