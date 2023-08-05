@@ -68,6 +68,13 @@ if (function_exists('acf_add_options_page')) {
         'redirect' => false
     ]);
 }
+//woocommerce theme support
+function mytheme_add_woocommerce_support() {
+    add_theme_support('woocommerce');
+}
+
+add_action('after_setup_theme', 'mytheme_add_woocommerce_support');
+
 //move Yoast down
 add_filter( 'wpseo_metabox_prio', function() {
     return 'low';

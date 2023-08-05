@@ -1,23 +1,49 @@
 jQuery(function () {
 
-    $('.owl-carousel').owlCarousel({
-        // Owl Carousel options here
-        loop: true,
-        margin: 0,
-        autoplaySpeed: 1500,
-        autoplayTimeout: 9000,
-        items: 1,
-        nav: true,
-        dots: true,
-        navContainer: '.owl-navigation',
-        dotsContainer: '.owl-dots',
-        navText: ''
+    $(".owl-carousel").each(function () {
+        let $carousel = $(this);
+        $carousel.owlCarousel({
+            loop: true,
+            margin: 0,
+            autoplaySpeed: 1500,
+            autoplayTimeout: 9000,
+            items: 1,
+            nav: true,
+            dots: true,
+            navText: '',
+            navContainer: $carousel.next(".owl-navigation").find(".owl-nav"),
+            dotsContainer: $carousel.next(".owl-navigation").find(".owl-dots"),
+        });
     });
 
-    // Remove WP Block element iframe classes
-    if (jQuery('.wp-block-embed-yout&#x27;next&#x27;,&#x27;prev&#x27;ube').length) {
-        jQuery('.wp-block-embed-youtube').removeClass().addClass('embed-responsive-item');
-    }
+
+    $(".post-carousel").each(function () {
+        let $carousel = $(this);
+        $carousel.owlCarousel({
+            loop: true,
+            margin: 16,
+            autoplaySpeed: 1500,
+            autoplayTimeout: 9000,
+            nav: true,
+            dots: true,
+            navText: '',
+            navContainer: $carousel.next(".owl-navigation").find(".owl-nav"),
+            dotsContainer: $carousel.next(".owl-navigation").find(".owl-dots"),
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+    });
+
+    $('.owl-carousel .owl-nav, .owl-carousel .owl-dots').wrapAll('<div class="owl-navigation"></div>');
 
     // Scrolling anchors
     jQuery('.scrollable-anchor').on('click', function (e) {
@@ -61,9 +87,9 @@ var targetBlankExternalLinks = function () {
         + ')|(localhost:\\d{4})|(\\/.*))(\\/.*)?$', '');
 
     jQuery('a').filter(function () {
-            var href = jQuery(this).attr('href');
-            return !internalLinkRegex.test(href);
-        })
+        var href = jQuery(this).attr('href');
+        return !internalLinkRegex.test(href);
+    })
         .each(function () {
             jQuery(this).attr('target', '_blank');
         });

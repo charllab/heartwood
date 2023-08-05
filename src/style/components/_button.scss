@@ -11,6 +11,11 @@ button, .btn {
         padding: 12px 32px;
     }
 }
+
+.btn-primary {
+    background-color: darken($brown, 12%);
+    border-color: darken($brown, 12%);
+}
 .btn-secondary {
     color: $brown;
 }

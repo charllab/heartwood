@@ -103,7 +103,7 @@ $dot-background-active: lighten($dark, 30%);
 /*
  *  Owl Carousel - Core
  */
-.owl-carousel {
+.owl-carousel, .post-carousel {
     display: none;
     width: 100%;
     -webkit-tap-highlight-color: transparent;
@@ -228,55 +228,56 @@ $dot-background-active: lighten($dark, 30%);
 }
 
 
-.owl-navigation {
+.owl-navigation, .owl-nav {
     button {
         margin-bottom: 0 !important;
     }
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     .owl-dots {
-    display: flex;
-    text-align: center;
-    -webkit-tap-highlight-color: transparent;
+        display: flex;
+        text-align: center;
+        -webkit-tap-highlight-color: transparent;
 
-    .owl-dot {
-        display: inline-block;
-        zoom: 1;
-        *display: inline;
-        padding: 0;
-        border: none;
-        background-color: transparent;
+        .owl-dot {
+            display: inline-block;
+            zoom: 1;
+            *display: inline;
+            padding: 0;
+            border: none;
+            background-color: transparent;
 
-        span {
-            width: $dot-width;
-            height: $dot-height;
-            margin: $dot-margin;
-            background: $dot-background;
-            display: block;
-            -webkit-backface-visibility: visible;
-            transition: opacity 200ms ease;
-            border-radius: $dot-rounded;
-            border: 1px solid $dot-background-active;
-        }
-
-        &.active,
-        &:hover {
             span {
-                background: $dot-background-active;
+                width: $dot-width;
+                height: $dot-height;
+                margin: $dot-margin;
+                background: $dot-background;
+                display: block;
+                -webkit-backface-visibility: visible;
+                transition: opacity 200ms ease;
+                border-radius: $dot-rounded;
+                border: 1px solid $dot-background-active;
+            }
+
+            &.active,
+            &:hover {
+                span {
+                    background: $dot-background-active;
+                }
             }
         }
+
     }
-
 }
-}
-
 
 
 .owl-prev,
 .owl-next {
     margin: 0 5px; /* Space between the arrows */
-    padding: 0!important;
+    padding: 0 !important;
     height: 38px;
     background-color: $dot-background;
     border: 1px solid $dot-background-active;
@@ -284,6 +285,7 @@ $dot-background-active: lighten($dark, 30%);
     border-radius: 50%;
     background-repeat: no-repeat;
     background-position: center;
+
     span {
         font-size: 20px;
         font-family: $inter;
@@ -294,7 +296,8 @@ $dot-background-active: lighten($dark, 30%);
 .owl-next {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20' height='20' viewBox='0 0 20 20'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='Rectangle_414' data-name='Rectangle 414' width='20' height='20' transform='translate(1366 1403)' fill='none' stroke='%23707070' stroke-width='1'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='Mask_Group_47' data-name='Mask Group 47' transform='translate(1386 1423) rotate(180)' clip-path='url(%23clip-path)'%3E%3Cpath id='ic_expand_less_24px' d='M15,8,6,17.717,8.115,20,15,12.583,21.885,20,24,17.717Z' transform='translate(1361 1428) rotate(-90)' opacity='0.84'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
-.owl-prev{
+
+.owl-prev {
     display: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20' height='20' viewBox='0 0 20 20'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='Rectangle_412' data-name='Rectangle 412' width='20' height='20' transform='translate(1366 1403)' fill='none' stroke='%23707070' stroke-width='1'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='Mask_Group_46' data-name='Mask Group 46' transform='translate(-1366 -1403)' clip-path='url(%23clip-path)'%3E%3Cpath id='ic_expand_less_24px' d='M15,8,6,17.717,8.115,20,15,12.583,21.885,20,24,17.717Z' transform='translate(1361 1428) rotate(-90)' opacity='0.84'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
