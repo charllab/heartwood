@@ -20,7 +20,7 @@ jQuery(function () {
     $(".post-carousel").each(function () {
         let $carousel = $(this);
         $carousel.owlCarousel({
-            loop: true,
+            loop: false,
             margin: 16,
             autoplaySpeed: 1500,
             autoplayTimeout: 9000,

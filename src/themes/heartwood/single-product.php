@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<main class="pt-1">
+<main class="pt-2">
     <section>
     <div class="container">
         <div class="row">

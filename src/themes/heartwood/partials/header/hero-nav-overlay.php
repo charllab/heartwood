@@ -34,7 +34,7 @@
             'theme_location' => 'primary',
             'container_class' => 'container',
             'container_id' => 'mainnav-mobile',
-            'menu_class' => 'navbar-nav ml-auto',
+            'menu_class' => 'navbar-nav ms-auto',
             'fallback_cb' => '',
             'menu_id' => 'main-menu',
             'walker' => new bootstrap_5_wp_nav_menu_walker(),
@@ -49,9 +49,9 @@
                         </i>
                     </a>
                 <?php endwhile; ?>
-            </div>
-        </div>
-    </div>
+            </div><!-- social-links -->
+        </div><!-- container -->
+    </div><!-- collapse -->
 
     <?php $header = get_field('header');
     $align = $header['buttons_set'];

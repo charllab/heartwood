@@ -25,3 +25,10 @@ body .gform_wrapper .gform_footer input[type=submit] {
     margin-top: 0 !important;
     padding: 12px 32px;
 }
+
+body .gform_wrapper .gform_footer input[type=submit] {
+    @extend .btn;
+    @extend .btn-primary;
+    color: white;
+    margin-right: $spacer*.5;
+}

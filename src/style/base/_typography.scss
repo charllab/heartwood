@@ -37,7 +37,7 @@ body {
     font-style: normal;
 }
 
-.column-content {
+.column-content, .contact-sidebar {
     .content   {
         .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
             padding-left: $spacer*.75;
@@ -94,5 +94,15 @@ h3, .h3 {
 .text-white {
     .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, p {
         color: white;
+    }
+}
+.text-mustard {
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, p, a {
+        color: $mustard;
+    }
+}
+.text-decoration-none {
+    * {
+        text-decoration: none !important;
     }
 }

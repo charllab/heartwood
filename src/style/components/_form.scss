@@ -12,8 +12,113 @@
 }
 
 
-body .gform_body .gform_fields .gfield .gfield_label {
-    font-size: 14px;
-    font-weight: 400;
-    color: lighten($body-color, 35%);
+body .gform_wrapper {
+    margin-bottom: $spacer;
 }
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_label {
+    font-weight: 700 !important;
+    font-family: $inter;
+    color: $dark;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_label .gfield_required {color: red}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_description {
+    color: $dark;
+}
+body .gform_wrapper .gform_body {
+    .gform-field-label--type-sub {color: $dark;}
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_complex .ginput_left label {color: $dark}
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_complex .ginput_right label {color: $dark}
+
+body .gform_wrapper .gform_required_legend {
+    font-weight: 700;
+    font-size: 90%;
+}
+body .gform_wrapper .gfield_description.validation_message.gfield_validation_message {
+    padding: $spacer*.75 !important;
+    color: #c02b0a !important;
+}
+body .gform_wrapper .gform_validation_errors {
+    padding: $spacer*.75 !important;
+    box-shadow: none !important;
+    border-width: 1px !important;
+    border-radius: 0 !important;
+}
+body .gform_wrapper .gform_validation_errors * {
+    font-size: 90% !important;
+    font-family: $sofia !important;
+}
+
+
+body .gform_wrapper .gform_required_legend {
+    color: #d9320e;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_label .gfield_required {color: #d9320e;}
+
+body .gform_wrapper input[type=text],
+body .gform_wrapper input[type=email],
+body .gform_wrapper input[type=url],
+body .gform_wrapper input[type=tel],
+body .gform_wrapper input[type=number],
+body .gform_wrapper input[type=password],
+body .gform_wrapper textarea,
+body .gform_wrapper select {
+    border: 1px solid #c0c0c0 !important;
+    border-radius: 8px; /* Change the value '5px' to the desired border radius */
+}
+
+#input_2_22 {
+    display: flex;
+    flex-wrap: wrap;
+    .gfield-choice-input {
+        margin-right: 5px;
+    }
+}
+.gfield_radio .gchoice {
+    border: 1px solid #c0c0c0;
+    border-radius: 16px;
+    padding: 4px 16px 4px 12px;
+    display: flex;
+    margin-right:10px;
+    margin-bottom: $spacer/2;
+}
+
+.gform_wrapper.gravity-theme .gfield-choice-input+label {
+    margin-bottom: 2px !important;
+    padding-right: 2px;
+    font-weight: 700;
+    color: $dark;
+}
+
+#field_2_16 {
+    padding-top: $spacer*1.5;
+    .ginput_container.ginput_container_fileupload {
+        border-radius: 16px;
+        border: 1px dashed #c0c0c0;
+        padding: $spacer;
+        .gfield_description.gform_fileupload_rules {
+            max-width: 310px;
+            font-size: 14px
+        }
+    }
+}
+
+body .gform_wrapper select {
+    -webkit-appearance: none;  /* For Chrome and Safari */
+    -moz-appearance: none;     /* For Firefox */
+    appearance: none;          /* General rule for all browsers */
+    background-color: #fff;    /* You can set your own background color */
+    padding-right: 25px;       /* Space for the custom arrow */
+}
+body .gform_wrapper select {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 16 16'><path fill='%232C2C2C' d='M8 10.293l6.293-6.293L16 5.707 8 13.707 0 5.707l1.707-1.414L8 10.293z'/></svg>");
+    background-position: right 1em center; /* Adjust as needed */
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 2em; /* Add space for the arrow */
+}
+

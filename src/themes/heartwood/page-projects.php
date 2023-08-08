@@ -6,39 +6,17 @@ get_header();
 
     <section class="bg-skin--tint py-1">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
+            <div class="row justify-content-between mb-1">
+                <div class="col-md-3">
                     <h2>Our Work</h2>
-
-                    <?php
-                    $product_categories = get_terms('product_cat', array(
-                        'hide_empty' => false, // Change to true if you want to hide empty categories
-                    ));
-
-                    if (!empty($product_categories) && !is_wp_error($product_categories)) :
-                        echo '<ul class="product-categories-list">';
-                        foreach ($product_categories as $product_category) :
-                            $category_link = get_term_link($product_category->term_id, 'product_cat');
-                            $thumbnail_id = get_term_meta($product_category->term_id, 'thumbnail_id', true);
-                            $image = wp_get_attachment_url($thumbnail_id);
-                            ?>
-                            <li class="product-category">
-                                <a href="<?php echo esc_url($category_link); ?>">
-                                    <?php if ($image): ?>
-                                        <img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($product_category->name); ?>" />
-                                    <?php endif; ?>
-                                    <h2><?php echo esc_html($product_category->name); ?></h2>
-                                </a>
-                            </li>
-                        <?php
-                        endforeach;
-                        echo '</ul>';
-                    else :
-                        echo 'No product categories found';
-                    endif;
-                    ?>
-
                 </div>
+                <div class="col">
+                    <div class="d-md-flex justify-content-md-end align-content-center pt-md-50">
+                        <?php get_template_part('partials/sorting/sort-by-cat'); ?>
+                    </div><!-- d-flex-->
+                </div><!-- col-->
+            </div><!-- row-->
+            <div class="row">
                 <?php
                 $args = array(
                     'post_type' => 'product',
