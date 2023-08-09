@@ -8,11 +8,12 @@ get_header(); ?>
 
     <main>
 
+        <?php get_template_part('partials/body/flexible-content'); ?>
+
         <section>
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="col">
-
                         <?php if (have_posts()) : ?>
                             <?php /* Start the Loop */ ?>
                             <?php while (have_posts()) : the_post(); ?>
