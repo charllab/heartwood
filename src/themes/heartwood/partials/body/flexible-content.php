@@ -76,7 +76,7 @@ if ($layouts) : ?>
                 <div class="container position-relative z-index-10">
                     <div
                         class="row <?php echo ($image_order == 'order-md-last') ? '' : 'justify-content-md-end'; ?> align-items-center">
-                        <div class="col-md-6 pt-md-25 <?php echo esc_attr($image_order); ?>">
+                        <div class="col-md-6 pt-md-50 <?php echo esc_attr($image_order); ?>">
                             <?php
                             if ($images): ?>
                                 <div class="owl-carousel owl-theme mb-50">

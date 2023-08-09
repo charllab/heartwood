@@ -27,7 +27,7 @@ get_header();
                     echo '<div class="position-relative z-index-10 d-flex flex-column justify-content-between h-100">';
                     echo '<h3 class="text-white">' . get_the_title() . '</h3>';
                     echo '<div class="link-wrap text-center">';
-                    echo '<a href="' . get_the_permalink() . '" class="btn btn-primary">Learn More</a>';
+                    echo '<a href="' . get_the_permalink() . '" class="btn btn-secondary">Learn More</a>';
                     echo '</div><!-- link-wrap -->';
                     echo '</div><!-- position-relative-->';
                     echo '</div><!-- postcard -->';

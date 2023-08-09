@@ -158,7 +158,10 @@
 }
 .home {
     .header__banner {
-        min-height: 670px;
+        min-height: 320px;
+        @include media-breakpoint-up(md) {
+            min-height: 670px;
+        }
     }
 }
 

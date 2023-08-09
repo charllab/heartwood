@@ -21,6 +21,7 @@ get_header();
                     <?php while (have_posts()) : the_post(); ?>
                         <h2><?php the_title(); ?></h2>
                         <?php the_content(); ?>
+                        <a href="<?php echo esc_url(home_url('/projects')); ?>" class="btn btn-secondary text-decoration-none">Back</a>
                     <?php endwhile; ?>
                 <?php endif; ?>
             </div>

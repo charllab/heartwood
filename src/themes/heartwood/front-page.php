@@ -1,5 +1,38 @@
 <?php get_header(); ?>
     <main>
+        <?php
+        $baricons = get_field('icons');
+        $barcta = get_field('button');
+        if ($baricons) :?>
+
+            <section class="bg-dark homepage-bar">
+                <div class="container py-150">
+                    <div class="row text-sm-start align-content-center align-items-center text-white">
+                        <?php foreach ($baricons as $baricon) :
+                            $icon = $baricon['icon']; ?>
+                            <div class="col-sm-3">
+                                <div class="d-flex justify-content-center align-items-center mb-75 mb-sm-0">
+                                    <img src="<?php echo esc_attr($icon['url']); ?>"
+                                         alt="<?php echo esc_attr($icon['alt']); ?>"
+                                         class="img-fluid">
+                                    <span class="min-content d-block"><?php echo $baricon['title']; ?></span>
+                                </div><!-- d-flex -->
+                            </div><!-- col -->
+                        <?php endforeach; ?>
+                        <?php if ($barcta): ?>
+                            <div class="col-sm-3 text-center">
+                                    <a href="<?php echo $barcta['url']; ?>"
+                                       class="btn btn-secondary mb-0 mt-1 mt-sm-0">
+                                        <?php echo $barcta['title']; ?>
+                                    </a>
+                            </div><!-- col -->
+                        <?php endif; ?>
+                    </div><!-- row -->
+                </div><!-- container -->
+            </section>
+        <?php endif; ?>
+
+
         <?php get_template_part('partials/body/flexible-content'); ?>
 
         <section class="frontpage--posts bg-skin--tint py-2 mb-2 mb-md-4">
@@ -12,9 +45,7 @@
                             $args = array(
                                 'posts_per_page' => 6,
                                 'post_type' => 'post',
-                                'post_status' => 'publish',
-                                'orderby' => 'date',
-                                'order' => 'DESC'
+                                'post_status' => 'publish'
                             );
                             $query = new WP_Query($args);
                             if ($query->have_posts()) :
@@ -25,7 +56,7 @@
                                     echo '<div class="position-relative z-index-10 d-flex flex-column justify-content-between h-100">';
                                     echo '<h5 class="text-white">' . get_the_title() . '</h5>';
                                     echo '<div class="link-wrap text-center">';
-                                    echo '<a href="' . get_the_permalink() . '" class="btn btn-primary">Learn More</a>';
+                                    echo '<a href="' . get_the_permalink() . '" class="btn btn-secondary">Learn More</a>';
                                     echo '</div><!-- link-wrap -->';
                                     echo '</div><!-- position-relative-->';
                                     echo '</div><!-- postcard -->';

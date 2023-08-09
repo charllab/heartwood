@@ -4,7 +4,9 @@ jQuery(function () {
         let $carousel = $(this);
         $carousel.owlCarousel({
             loop: true,
+            autoHeight: true,
             margin: 0,
+            autoplay: true,
             autoplaySpeed: 1500,
             autoplayTimeout: 9000,
             items: 1,
@@ -20,7 +22,9 @@ jQuery(function () {
     $(".post-carousel").each(function () {
         let $carousel = $(this);
         $carousel.owlCarousel({
-            loop: false,
+            autoplay: true,
+            loop: true,
+            autoHeight: true,
             margin: 16,
             autoplaySpeed: 1500,
             autoplayTimeout: 9000,

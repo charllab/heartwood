@@ -24,10 +24,10 @@ get_header();
             </article>
             <div class="container">
                 <div class="row justify-content-center blog-nav-single text-mustard">
-                    <div class="col-sm-5">
+                    <div class="col col-sm-5">
                         <span class="nav-previous text-decoration-none"><?php previous_post_link('%link', '<span class="meta-nav">' . _x('&larr;', 'Previous post link', '') . '</span> %title'); ?></span>
                     </div><!-- col -->
-                    <div class="col-sm-5 d-flex justify-content-end blog-nav-single-right">
+                    <div class="col col-sm-5 d-flex justify-content-end blog-nav-single-right">
                         <span class="nav-next text-decoration-none"><?php next_post_link('%link', '%title <span class="meta-nav">' . _x('&rarr;', 'Next post link', '') . '</span>'); ?></span>
                     </div><!-- col -->
                 </div><!-- row -->

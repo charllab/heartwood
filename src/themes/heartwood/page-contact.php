@@ -77,7 +77,7 @@ get_header(); ?>
 
                         <div class="px-0">
                             <?php $mapurl = get_field('map_embed_code', 'option'); ?>
-                            <iframe src="<?php echo $mapurl; ?>" width="600" height="412" style="border:0;"
+                            <iframe src="<?php echo $mapurl; ?>" width="740" height="412" style="border:0;"
                                     allowfullscreen="" loading="lazy"></iframe>
                         </div><!-- px-0 -->
                     </div><!-- col -->

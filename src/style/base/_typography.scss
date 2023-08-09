@@ -48,6 +48,15 @@ body {
         }
     }
 }
+
+.wp-block-heading {
+    padding-left: $spacer*.75;
+    padding-top: $spacer*.45;
+    padding-bottom: $spacer*.45;
+    display: block;
+    border-left: 5px solid $mustard;
+}
+
 h1, .h1 {
     @include media-breakpoint-up(lg) {
         font-size: 48px;
