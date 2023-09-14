@@ -35,7 +35,7 @@
 
         <?php get_template_part('partials/body/flexible-content'); ?>
 
-        <section class="frontpage--posts bg-skin--tint py-2 mb-2 mb-md-4">
+        <section class="frontpage--posts bg-skin--tint py-2 mb-2 mb-md-4 d-none">
             <div class="container">
                 <div class="row">
                     <div class="col">
