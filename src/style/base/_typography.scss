@@ -39,7 +39,7 @@ body {
 
 .column-content, .contact-sidebar {
     .content   {
-        .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        .h1, .h2, .h3, h1, h2, h3 {
             padding-left: $spacer*.75;
             padding-top: $spacer*.45;
             padding-bottom: $spacer*.45;
@@ -71,6 +71,10 @@ h3, .h3 {
     @include media-breakpoint-up(lg) {
         font-size: 32px;
     }
+}
+
+.h6, h6 {
+    margin-bottom: 0;
 }
 
 .spaced-list {
