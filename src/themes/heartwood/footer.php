@@ -3,19 +3,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7 text-white text-center text-md-start">
+                    <div>
                         <a href="<?php echo esc_url(home_url('/')); ?>">
                             <img src="<?php bloginfo('template_url'); ?>/images/logo.svg"
                                  alt="<?php bloginfo('name'); ?> - Logo"
                                  class="img-fluid bg-skin text-center p-1 mb-1 rounded">
                             <span class="sr-only"><?php bloginfo('name'); ?></span>
                         </a>
+                    </div>
+                    <?php $footer_blurb = get_field('footer_blurb', 'option');
+                    if($footer_blurb) : ?>
                     <p class="mb-150 pe-md-1">
-                        Lorem ipsum dolor sit amet, consectetur elit. Curabitur ullamcorper scelerisque nisi et
-                        tincidunt. In sit amet metus condimentum, faucibus ipsum sed, pellentesque mi. Aliquam dolor
-                        odio, pharetra et pellentesque non, vulputate vitae purus. Curabitur interdum, justo id mollis
-                        interdum, justo sem lacinia tellus, quis consectetur augue neque ut leo. Suspendisse justo
-                        magna, pellentesque sed accumsan vitae, ullamcorper at turpisv
+                        <?php echo get_field('footer_blurb', 'option'); ?>
                     </p>
+                    <?php endif;?>
                     <?php
                     $button = get_field('footer_button', 'option');
                     if ($button): ?>
