@@ -18,7 +18,7 @@
 
             <h2 class="h5 mt-1 mb-250"><?php the_title(); ?></h2>
             <!-- Display the product price -->
-            <div class="product-price">
+            <div class="product-price mb-250">
                 <?php
                 if ($product && $product instanceof WC_Product) {
                     echo $product->get_price_html();
@@ -28,7 +28,7 @@
                 ?>
             </div>
 
-            <a href="<?php the_permalink(); ?>" class="d-none btn btn-secondary">Read More</a>
+            <a href="<?php the_permalink(); ?>" class="btn btn-secondary">Read More</a>
         </div><!-- product -->
     </div>
 </div><!-- col -->

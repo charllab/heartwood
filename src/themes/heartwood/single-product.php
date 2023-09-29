@@ -1,5 +1,7 @@
 <?php
 get_header();
+global $product;
+$product = wc_get_product(get_the_ID());
 ?>
 
 <main class="pt-2">
@@ -19,8 +21,19 @@ get_header();
                 <?php if (have_posts()) : ?>
                     <?php /* Start the Loop */ ?>
                     <?php while (have_posts()) : the_post(); ?>
-                        <h2><?php the_title(); ?></h2>
-                        <?php the_content(); ?>
+                        <h2 class="mb250"><?php the_title(); ?></h2>
+                        <div class="product-price mb-50">
+                            <?php
+                            if ($product && $product instanceof WC_Product) {
+                                echo $product->get_price_html();
+                            } else {
+                                echo 'Price not available';
+                            }
+                            ?>
+                        </div>
+                        <div class="mb-1">
+                            <?php the_content(); ?>
+                        </div>
                         <a href="<?php echo esc_url(home_url('/projects')); ?>" class="btn btn-secondary text-decoration-none">Back</a>
                     <?php endwhile; ?>
                 <?php endif; ?>
