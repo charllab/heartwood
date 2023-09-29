@@ -21,7 +21,7 @@ $product = wc_get_product(get_the_ID());
                 <?php if (have_posts()) : ?>
                     <?php /* Start the Loop */ ?>
                     <?php while (have_posts()) : the_post(); ?>
-                        <h2 class="mb250"><?php the_title(); ?></h2>
+                        <h2 class="mb-250"><?php the_title(); ?></h2>
                         <div class="product-price mb-50">
                             <?php
                             if ($product && $product instanceof WC_Product) {
