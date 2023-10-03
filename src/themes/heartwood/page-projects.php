@@ -1,6 +1,10 @@
 <?php
-get_header();
-?>
+/**
+ *
+ * Template Name: Projects Page
+ *
+ **/
+get_header(); ?>
 <main>
     <?php get_template_part('partials/body/flexible-content'); ?>
 
